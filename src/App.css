@@ -1,0 +1,146 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* MAIN APP WRAPPER */
+.app {
+  text-align: center;
+  padding: 50px;
+  color: white;
+  min-height: 100vh;
+
+  position: relative;
+  overflow: hidden;
+}
+
+/* 🌄 BACKGROUND IMAGE LAYER */
+.app::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  background: url("./assets/red-sky-800x450.jpeg") no-repeat center center/cover;
+  opacity: 0.35; /* 👈 controls image visibility */
+  z-index: 0;
+}
+
+/* 🌈 GRADIENT OVERLAY LAYER */
+.app::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  z-index: 1;
+  transition: all 0.8s ease-in-out;
+}
+
+/* Bring content above layers */
+.app > * {
+  position: relative;
+  z-index: 2;
+}
+
+/* 🔵 DEFAULT */
+.app.default::after {
+  background: linear-gradient(
+    to right,
+    rgba(102, 126, 234, 0.6),
+    rgba(118, 75, 162, 0.6)
+  );
+}
+
+/* ☀️ SUNNY */
+.app.sunny::after {
+  background: linear-gradient(
+    to right,
+    rgba(252, 234, 187, 0.6),
+    rgba(248, 181, 0, 0.6)
+  );
+}
+
+/* ☁️ CLOUDY */
+.app.cloudy::after {
+  background: linear-gradient(
+    to right,
+    rgba(189, 195, 199, 0.6),
+    rgba(44, 62, 80, 0.6)
+  );
+}
+
+/* 🌧️ RAINY */
+.app.rainy::after {
+  background: linear-gradient(
+    to right,
+    rgba(75, 121, 161, 0.6),
+    rgba(40, 62, 81, 0.6)
+  );
+}
+
+/* ❄️ SNOWY */
+.app.snowy::after {
+  background: linear-gradient(
+    to right,
+    rgba(230, 218, 218, 0.6),
+    rgba(39, 64, 70, 0.6)
+  );
+}
+
+/* UI ELEMENTS */
+h1 {
+  font-size: 2.5rem;
+}
+
+.search-bar {
+  margin-top: 20px;
+}
+
+.search-bar input {
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  width: 220px;
+}
+
+.search-bar button {
+  padding: 10px 15px;
+  margin-left: 10px;
+  border: none;
+  border-radius: 10px;
+  background: #007bff;
+  color: white;
+  cursor: pointer;
+}
+
+.weather-card {
+  margin-top: 30px;
+  padding: 20px;
+  border-radius: 15px;
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  color: white;
+}
+
+.loading {
+  margin-top: 20px;
+}
+
+.error {
+  margin-top: 20px;
+  color: red;
+}
+
+/* FADE EFFECT */
+.fade-in {
+  opacity: 1;
+  transition: opacity 0.4s ease-in-out;
+}
+
+.fade-out {
+  opacity: 0.6;
+  transition: opacity 0.4s ease-in-out;
+}
