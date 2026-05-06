@@ -1,16 +1,45 @@
-# React + Vite
+# 🌤️ Weather App (React + OpenWeather API)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 📌 Overview
+A modern Weather App built using React that fetches real-time weather data using the OpenWeather API.  
+It provides weather details for any city worldwide with a clean UI and dynamic background effects.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## ✨ Features
+- 🔍 Search weather by city (global support 🌍)
+- 🌡️ Real-time temperature display
+- 🤔 "Feels like" temperature
+- 💧 Humidity and 🌬️ wind speed
+- ☁️ Weather condition with icon
+- 🎨 Dynamic gradient backgrounds based on weather
+- 🌄 Background image with translucent overlay
+- ⚡ Smooth transitions and fade effects
+- 💾 Fast performance with Vite
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🛠️ Tech Stack
+- React ⚛️
+- JavaScript
+- HTML5 & CSS3
+- Vite
+- OpenWeather API
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 📸 Preview
+<img width="809" height="511" alt="image" src="https://github.com/user-attachments/assets/898ddd9b-4ef8-4fc1-a7bd-922880dfe30f" />
+<img width="807" height="826" alt="image" src="https://github.com/user-attachments/assets/35c0e8b9-9833-4a53-a3bd-6c77de76d3f0" />
+<img width="807" height="839" alt="image" src="https://github.com/user-attachments/assets/a7c923ab-28dd-4532-ab87-241ab98f2d97" />
+
+
+---
+
+## 🚀 How to Run Locally
+
+```bash
+git clone https://github.com/Ashish-Galaxy07/weather-app.git
+cd weather-app
+npm install
+npm run dev
